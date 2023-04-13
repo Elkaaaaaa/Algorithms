@@ -3,10 +3,6 @@ public class HeapSort {
         int largest = rootIndex;
         int leftChild = 2 * rootIndex + 1;
         int rightChild = 2 * rootIndex + 2;
-        for (int i : array) {
-            System.out.print(i + " ");
-        }
-        System.out.println();
         if (leftChild < heapSize && array[leftChild] > array[largest]) {
             largest = leftChild;
         }
@@ -28,7 +24,6 @@ public class HeapSort {
         for (int i = array.length / 2 - 1; i >= 0; i--) {
             heapify(array, array.length, i);
         }
-        System.out.println("End sort");
         for (int i = array.length - 1; i >= 0; i--) {
             int temp = array[0];
             array[0] = array[i];
